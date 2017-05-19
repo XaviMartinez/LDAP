@@ -3,6 +3,14 @@ ini_set('display_errors',1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+if (!isset($_POST["humano"])){
+	$_SESSION["ERROR"] = "Completa el captcha";
+	header('Location: index.php');
+}elseif (isset($_POST["robot"])){
+	$_SESSION["ERROR"] = "Eres un robot!";
+	header('Location: index.php');
+}
+
 $username =  $_POST["username"];
 $name = $_POST["user"];
 $newpass = $_POST["new_password"];
@@ -25,7 +33,7 @@ if(isset($username) and isset($newpass) and isset($oldpass)) {
         header('Location: index.php');
       }
       else {
-        $_SESSION["ERROR"] = "No se ha podido cambiar la contraseña".
+        $_SESSION["ERROR"] = "No se ha podido cambiar la contraseña";
         header('Location: index.php');
       }
       print "</p>\n";

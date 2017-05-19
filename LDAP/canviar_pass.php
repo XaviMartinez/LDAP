@@ -93,6 +93,9 @@ session_start();
         <input type="hidden" name="user" value="<?php echo $_POST["nombre"]?>" />
     	  <input type="password" name="old_pass" placeholder="Contraseña Actual" required="required" />
         <input type="password" name="new_password" placeholder="Nueva Contraseña" required="required" />
+        <input type="checkbox" name="humano" value="humano" required = "required"> Marca si eres humano</input></br>
+        <input type="checkbox" name="robot" value="robot" required = "required"> Marca si eres robot</input></br>
+        
         <button type="submit" class="btn btn-primary btn-block btn-large">Canviar</button>
       </form>
   </div>
