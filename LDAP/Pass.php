@@ -17,8 +17,6 @@ $newpass = $_POST["new_password"];
 $oldpass = $_POST["old_pass"];
 $dn = "uid=".$name.",dc=daw2,dc=net";
 
-echo "Esto es un mensaje de prueba!!!";
-
 if(isset($username) and isset($newpass) and isset($oldpass)) {
 
     $ldapconn = ldap_connect("localhost");
