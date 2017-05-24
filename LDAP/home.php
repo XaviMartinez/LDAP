@@ -134,6 +134,7 @@ if ($ldapconn) {
       <td><?php echo $home;?></td>
       <td><?php echo $passwd;?></td>
       <td><?php echo $shell?></td>
+      <td><?php echo "ESte es otro mensaje diferente"?>
     </tr>
   </table>
 
